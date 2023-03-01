@@ -1,0 +1,58 @@
+1.Create a table name - “Football Venue”.
+
+SQL> create table Football(
+  2  venue_id number(10),
+  3  venue_name varchar2(20),
+  4  city_id number(10),
+  5  capacity number(20)
+  6  );
+
+2.Insert 10 details in the “Football Venue” table
+
+
+SQL> insert into football values(501234,'England',30203,423325);
+
+
+SQL> insert into football values(245092,'Iran',405991,604321);
+
+
+SQL> insert into football values(645092,'USA',533991,708621);
+
+
+SQL> insert into football values(5850020,'Germany',368783,564515);
+
+
+SQL> insert into football values(150020,'Spain',306783,935515);
+
+
+SQL> insert into football values(239654,'Japan',656783,265515);
+
+
+SQL> insert into football values(128656,'Denmark',78969,603515);
+
+
+SQL> insert into football values(569845,'Australia',465987,906515);
+
+
+SQL> insert into football values(102587,'Mexico',848751,898541);
+
+
+SQL> insert into football values(365897,'India',858943,234568);
+
+
+
+3. Count the number of venues of the football world cup
+
+SQL> select count(venue_id) from football;
+
+
+
+4.List all the venue names and capacities in the format of “Location” and “Volume”.
+
+SQL> select venue_name as Location , capacity as volume from football;
+
+
+
+5.Delete all the details where venue_name is equal to “Australia”
+
+SQL> Delete from football where venue_name='Australia';

@@ -1,0 +1,57 @@
+1.creating a table Query
+
+SQL> create table Employee_Details(
+  2  Emp_id number(10),
+  3  Emp_name varchar2(20),
+  4  Job_name varchar2(20),
+  5  Manager_id number(10),
+  6  Hire_date Date,
+  7  salary number(10),
+  8  Dep_id number(10)
+  9  );
+
+2.Insert details in the “Employee Details” table
+
+insert into Employee_Details values(1,'Manikanta','Security Engineer',12,'01-Dec-2002',50000,401);
+
+
+SQL> insert into Employee_Details values(2,'Krishna','Network Engineer',14,'23-Jun-2002',60000,23);
+
+
+SQL> insert into Employee_Details values(3,'Vishwanath','Devloper',15,'15-Aug-2020',40000,50);
+
+
+SQL> insert into Employee_Details values(4,'Harish','Devloper',15,'05-Jan-2018',40000,50);
+
+
+SQL> insert into Employee_Details values(5,'Raj','Analyst',20,'12-Sep-2015',35000,20);
+
+
+SQL> insert into Employee_Details values(6,'kalyan','Devloper',15,'25-Feb-2020',45000,50);
+
+
+SQL> insert into Employee_Details values(7,'Gupta','Manager',5,'14-Feb-2014',30000,48);
+
+
+SQL> insert into Employee_Details values(8,'Ameer','Analyst',12,'27-Dec-2019',39000,47);
+
+
+SQL> insert into Employee_Details values(9,'Arun','Manager',1,'19-Mar-2015',48000,35);
+
+
+SQL> insert into Employee_Details values(10,'Eswar','Devloper',9,'20-Apr-2017',50000,25);
+
+
+SQL> insert into Employee_Details values(11,'Varun','Devloper',11,'9-Jan-2020',39000,35);
+
+
+3.Find the salaries of all the employees from the “Employee Details” table
+
+SQL> select salary from Employee_Details;
+
+
+4.Change the salary where the emp_name is “Raj”
+
+SQL> update Employee_Details set salary=50000 where emp_name='raj';
+
+
