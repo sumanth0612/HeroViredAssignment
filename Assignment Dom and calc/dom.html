@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoM</title>
+    <style>
+        *{
+            text-align: center;
+        }
+        body{
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+    <p id="para" onmouseover="mouseover()" onmouseout="mouseout()">Hello World</p>
+    <input type="text" id="inpt">
+    <br><br>
+    <button onclick="assign()" onmouseover="bmouseover()" onmouseout="bmouseout()" id="btn">click</button>
+    <ul type="none">
+        <li onmouseover="limouseover(id)" onmouseout="limouseout(id)" id="l1">Apple</li>
+        <li onmouseover="limouseover(id)" onmouseout="limouseout(id)" id="l2">Mango</li>
+        <li onmouseover="limouseover(id)" onmouseout="limouseout(id)" id="l3">Orange</li>
+        <li onmouseover="limouseover(id)" onmouseout="limouseout(id)" id="l4">Grapes</li>
+    </ul>
+    <script>
+        function mouseover(){
+            document.getElementById("para").style.color="red";
+        }
+        function mouseout(){
+            document.getElementById("para").style.color="black";
+        }
+        function bmouseover(){
+            document.getElementById("btn").innerHTML="click me";
+        }
+        function bmouseout(){
+            document.getElementById("btn").innerHTML="click";
+        }
+        function assign(){
+            document.getElementById("inpt").value=document.getElementById("para").innerHTML;
+        }
+        function limouseover(id){
+            document.getElementById(id).style.color="blue";
+            document.getElementById(id).style.fontWeight="bold";
 
+        }
+        function limouseout(id){
+            document.getElementById(id).style.color="black";
+            document.getElementById(id).style.fontWeight="lighter";
+        }
+    </script>
+</body>
+</html>
